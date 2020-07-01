@@ -2,7 +2,7 @@ FROM jupyter/scipy-notebook
 
 USER root
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends pybind11-dev && \
+    apt-get install -y --no-install-recommends pybind11-dev pkg-config && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
